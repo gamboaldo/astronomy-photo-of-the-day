@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "./constants/base_url";
-import { API_KEY } from "./constants/api_key";
+// import { API_KEY } from "./constants/api_key";
 import Nav from "./components/Nav";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchImage = () => {
       axios
-        .get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
         .then((res) => {
           console.log(res);
           setTitle(res.data.title);
@@ -88,6 +88,17 @@ function App() {
       />
 
       <Footer />
+      <a href="https://github.com/gamboaldo/astronomy-photo-of-the-day-main">
+        <img
+          loading="lazy"
+          width="149"
+          height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149"
+          className="attachment-full size-full"
+          alt="Fork me on GitHub"
+          data-recalc-dims="1"
+        />
+      </a>
     </div>
   );
 }
