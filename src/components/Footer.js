@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const StyledFooter = styled.footer`
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: #eee;
   display: flex;
   justify-content: space-around;
@@ -49,7 +49,7 @@ export default function Footer(props) {
         <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>
       </div>
       <div className="middle-footer">
-        <a href="https://github.com/dgamboa/astronomy-photo-of-the-day">
+        <a href="https://github.com/gamboaldo/astronomy-photo-of-the-day">
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
@@ -59,5 +59,5 @@ export default function Footer(props) {
         </a>
       </div>
     </StyledFooter>
-  )
+  );
 }
